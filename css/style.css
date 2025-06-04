@@ -1,0 +1,489 @@
+/*inicio logos - tipografia*/
+.inicio {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    padding: 10px;
+    flex-direction: row-reverse;
+}
+
+/* Imagen de tipografía centrada y más chica */
+.tipografia {
+    width: 100%;         /* Se adapta al ancho disponible */
+    height: auto;        /* Mantiene su altura natural */
+    max-width: 1300px;   /* Límite visual para pantallas grandes */
+    display: block;
+    margin: 0 auto;
+}
+
+
+
+
+/* Logo más pequeño y a la derecha */
+.logo {
+    width: 90px;  /* Más pequeño que la tipografía */
+    height: auto;
+}
+
+
+/*menú*/
+/* Elimina estilos por defecto */
+#nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  background-color: white;
+  padding: 10px 0;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Contenedor que organiza menú, logo y redes sociales */
+.nav-container {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  max-width: 100%;
+  padding: 0 10px;
+  width: 100%;
+  position: relative;
+}
+
+/* Menú alineado a la izquierda */
+.menu-left {
+  list-style: none;
+  display: flex;
+  gap: 12px;
+  margin: 0;
+  padding: 0;
+}
+
+/* Links del menú */
+.menu-left li a {
+  font-family: 'Bangers', cursive;
+  display: block;
+  padding: 10px 12px;
+  background-color: transparent;
+  color: black;
+  text-decoration: none;
+  border: none;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+}
+
+.menu-left li a:hover {
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+/* Logo centrado */
+.logo-wrapper {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.logo {
+  width: 50px; /* Más pequeño */
+  height: auto;
+  display: block;
+}
+
+/* Redes sociales a la derecha */
+.social-icons {
+  position: absolute;
+  right: 20px; /* Ajusta este valor para mover más a la derecha o izquierda */
+  display: flex;
+  gap: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+  /* Quitamos margin-left: auto */
+}
+
+
+.social-icons a {
+  color: #DA121A;
+  font-size: 24px;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  transition: opacity 0.3s ease;
+}
+
+.social-icons a:hover {
+  opacity: 0.7;
+}
+
+.social-icons i {
+  font-size: 22px;
+}
+
+/* Padding para que el contenido no quede debajo del menú */
+body {
+  padding-top: 70px;
+}
+
+
+
+
+
+
+
+/*nosotros*/
+#nosotros,
+#staff,
+#actividades,
+#contacto,
+#ubicacion {
+    font-family: 'Bangers', cursive;
+    font-weight: normal;
+}
+
+
+#nosotros + p {
+    font-family: 'Merriweather', serif;
+    font-weight: 300; /* Light */
+    font-size: 1rem;
+    line-height: 1.6;
+}
+
+
+/*staff*/
+.staff {
+    display: flex;
+    justify-content: center;
+    gap: 200px; /* Aumentá este valor según lo que se desplacen */
+    flex-wrap: wrap;
+    padding: 40px 0;
+}
+
+
+.img-container {
+    position: relative;
+    width: 300px;
+    transition: transform 0.5s ease;
+}
+
+.img-container img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    transition: transform 0.5s ease;
+    display: block;
+}
+
+.overlay-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-family: 'Rock Salt', cursive;
+    font-size: 20px;
+    text-align: center;
+    pointer-events: none;
+    z-index: 2;
+}
+
+/* Texto adicional oculto por defecto */
+.texto-lado {
+    position: absolute;
+    top: 0;
+    width: 250px;
+    padding: 15px;
+    opacity: 0;                        /* Oculto por defecto */
+    pointer-events: none;             /* No interferir con el hover */
+    background-color: rgba(255, 255, 255, 0.95);
+    color: #333;
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    transition: opacity 0.5s ease;
+    z-index: 1;
+}
+
+/* Imagen a la izquierda, texto a la derecha */
+.img-container.izquierda:hover {
+    transform: translateX(-100px);
+}
+
+.img-container.izquierda .texto-lado {
+    left: 100%;
+}
+
+.img-container.izquierda:hover .texto-lado {
+    opacity: 1;                /* Mostrar solo en hover */
+    pointer-events: auto;
+}
+
+/* Imagen a la derecha, texto a la izquierda */
+.img-container.derecha:hover {
+    transform: translateX(100px);
+}
+
+.img-container.derecha .texto-lado {
+    right: 100%;
+}
+
+.img-container.derecha:hover .texto-lado {
+    opacity: 1;                /* Mostrar solo en hover */
+    pointer-events: auto;
+}
+
+.image-wrapper2 {
+    position: relative;
+    width: 100%;
+    height: 450px; /* Más vertical, antes 300px */
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+
+.image-wrapper2 img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: opacity 0.4s ease;
+    z-index: 1;
+}
+
+/* Imagen original visible por defecto */
+.image-wrapper2 .original {
+    opacity: 1;
+    z-index: 1;
+}
+
+/* Imagen alternativa oculta por defecto */
+.image-wrapper2 .alternativa {
+    opacity: 0;
+    z-index: 2;
+}
+
+/* Hover para intercambiar imágenes */
+.img-container:hover .original {
+    opacity: 0;
+}
+
+.img-container:hover .alternativa {
+    opacity: 1;
+}
+
+
+
+/*actividades*/
+.actividades-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin-top: 40px;
+}
+
+.actividad {
+    position: relative;
+    width: 23%;
+    text-align: center;
+    margin-bottom: 40px;
+    cursor: pointer;
+}
+
+.imagen-wrapper {
+    position: relative;
+    width: 100%;
+    height: 250px;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.imagen-wrapper img.normal {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    transition: opacity 0.4s ease;
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: block;
+    z-index: 1;
+}
+
+.imagen-wrapper img.hover-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    transition: opacity 0.4s ease;
+    z-index: 2;
+}
+
+/* Cuando hacemos hover, ocultamos completamente la imagen normal */
+.actividad:hover .imagen-wrapper img.normal {
+    opacity: 0;
+}
+
+/* Y mostramos la imagen alternativa con opacidad */
+.actividad:hover .imagen-wrapper img.hover-img {
+    opacity: 0.7;
+}
+
+.actividad-titulo {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    color: white;
+    font-family: 'Merriweather', serif;
+    font-size: 18px;
+    pointer-events: none;
+    z-index: 3;
+    background-color: transparent;
+    padding: 0;
+    transition: color 0.4s ease;
+}
+
+/* Cambia a negro al hacer hover */
+.actividad:hover .actividad-titulo {
+    color: black;
+}
+
+.actividad-descripcion {
+    opacity: 0;
+    max-height: 0;
+    overflow: hidden;
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    color: #333;
+    margin-top: 10px;
+    transition: opacity 0.4s ease, max-height 0.4s ease;
+}
+
+.actividad:hover .actividad-descripcion {
+    opacity: 1;
+    max-height: 100px;
+}
+
+
+
+
+
+.horarios {
+    width: 60%;          /* Ajustá según quieras */
+    height: auto;
+    border-radius: 10px;
+    display: block;
+    margin: 0 auto;
+}
+
+
+
+/*formulario*/
+/* Estilo general del formulario */
+.formulario {
+    background-color: #f9f9f9; /* Fondo suave */
+    width: 100%;
+    max-width: 600px; /* Ancho máximo para que no sea muy grande */
+    margin: 0 auto; /* Centra el formulario */
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Sombra sutil */
+}
+
+h4#contacto {
+    font-family: 'Bangers', cursive;
+    text-align: center;
+    color: #DA121A;
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+/* Estilo para las etiquetas de los campos */
+label {
+    display: block;
+    font-family: 'Bangers', cursive;
+    font-size: 18px;
+    color: #DA121A;
+    margin-bottom: 5px;
+}
+
+/* Estilo para los campos de texto */
+input[type="text"], textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px; /* Espaciado entre campos */
+    border: 2px solid #ddd;
+    border-radius: 5px;
+    font-family: 'Merriweather', serif;
+    font-size: 16px;
+    color: #333;
+    transition: border-color 0.3s ease;
+}
+
+/* Cambio de color al enfocar un campo */
+input[type="text"]:focus, textarea:focus {
+    border-color: #DA121A;
+    outline: none;
+}
+
+/* Estilo del textarea (más grande) */
+textarea {
+    height: 150px;
+    resize: vertical;
+}
+
+/* Estilo para el botón de envío */
+input[type="submit"] {
+    width: 100%;
+    padding: 12px;
+    background-color: #DA121A;
+    color: white;
+    font-family: 'Merriweather', serif;
+    font-size: 18px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+/* Cambio de color en el botón al pasar el ratón */
+input[type="submit"]:hover {
+    background-color: #9A0D14;
+}
+
+/* Estilo para los placeholders */
+input::placeholder, textarea::placeholder {
+    color: #999;
+}
+
+
+/*mapa*/
+#ubicacion {
+    text-align: center;
+    margin-top: 60px;
+    margin-bottom: 20px;
+}
+
+iframe {
+    display: block;
+    margin: 0 auto; /* Centra el iframe horizontalmente */
+    width: 80%; /* Ajusta el ancho a un 80% del contenedor (puedes modificar este valor) */
+    height: 400px; /* Reduce la altura para hacerlo más rectangular */
+    border: 0;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Sombra suave alrededor del mapa */
+}
+
+
+
+
